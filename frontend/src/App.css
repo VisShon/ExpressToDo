@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@400;500&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Body{
+  margin-top:0;
+  height: 20rem;
+  width: 15rem;
+  background: #9DCEFB;
+  border: 3px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+}
+.heading{
+  font-family: 'Mada', sans-serif;
+  color: rgb(33, 33, 33);
+  font-weight: 600;
+  font-size:1rem;
+  text-align: center;
+  margin-top:10px;
 }
 
-.App-link {
-  color: #61dafb;
+.button {
+  color: #fff;
+  border-radius: .5em;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #1178D7;
+  box-shadow: 5px 5px 0px 0px #000000;
+  font-weight: 600;
+  font-size:1rem;
+  margin-bottom: 10px;
+  text-decoration: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button:active{
+  box-shadow: 2px 2px 0px 0px #000000;
 }
