@@ -7,7 +7,7 @@ const {connectDB} = require('./config/database');
 
 const app = express();
 
-connectDB();
+connectDB(process.env.MONGODB_URI);
 
 //for request body text
 app.use(express.json());
