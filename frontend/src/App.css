@@ -41,5 +41,21 @@
 .cards{
   background-color: #9DCEFB;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 90%;
   overflow-y: scroll;
+}
+
+.todo{
+  font-family: 'Mada', sans-serif;
+  font-weight:500;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.checkbox{
+  box-shadow: 1px 1px 0px 0px #000000;
 }

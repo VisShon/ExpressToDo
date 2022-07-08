@@ -1,6 +1,8 @@
 import './App.css';
 import {useState,useEffect} from 'react';
 import axios from 'axios'
+import Todo from './Todo';
+
 
 function App() {
   const [data,setData] = useState(null)
@@ -21,9 +23,7 @@ function App() {
   return (
       <div className="Body">
         <span className="heading">Express ToDo</span>
-        <div className="cards">
-          
-        </div>
+        <Todo Data={data}/>
         <a href="#" className="button" onClick={onClick}>Add Goal</a>
       </div>
   );
