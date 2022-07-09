@@ -22,7 +22,7 @@ function App() {
 
   return (
       <div className="Body">
-        <span className="heading">Express ToDo</span>
+        <span className="heading">Express To-Do</span>
         <Todo Data={data}/>
         <a href="#" className="button" onClick={onClick}>Add Goal</a>
       </div>

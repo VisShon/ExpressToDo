@@ -13,7 +13,16 @@
 }
 .heading{
   font-family: 'Mada', sans-serif;
-  color: rgb(33, 33, 33);
+  color: rgb(255, 255, 255);
+  text-shadow:
+    -2px -2px 0 #000,
+     0   -2px 0 #000,
+     2px -2px 0 #000,
+     2px  0   0 #000,
+     2px  2px 0 #000,
+     0    2px 0 #000,
+    -2px  2px 0 #000,
+    -2px  0   0 #000;
   font-weight: 600;
   font-size:1rem;
   text-align: center;
