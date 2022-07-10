@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
 
 const goalSchema = mongoose.Schema({
-    text: {
+    title: {
         type: String,
         require: [true, 'Please add a text value']
+    },
+    status: {
+        type: Boolean,
+        default: false
     }
 },{
     timestamps: true,

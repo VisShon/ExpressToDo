@@ -7,13 +7,13 @@ const getGoals = asyncHandler(async (req,res) =>{
     res.status(200).json(goals);
 })
 const setGoal = asyncHandler(async (req,res) =>{
-    if(!req.body.text){
+    if(!req.body.title){
         res.status(400)
         throw new Error('please enter text');
     }
 
     const goal = await Goal.create({
-        text: req.body.text,
+        title: req.body.title,
     })
     res.status(200).json(goal);
 })

@@ -5,12 +5,16 @@ function Todo({Data}) {
 
     const[isDone,setIsDone] =useState(false);
 
+    const Checked = ()=>{
+
+    }
+
     return (
         <div className="cards">
             {Data==null ? <div>Loadng...</div>:
             Data.map((item, i) =>(
-                <span className="todo">
-                    <input type="checkbox" className="checkbox"></input>
+                <span className="todo" key={i}>
+                    <input type="checkbox" className="checkbox" ></input>
                     {item.title}
                 </span>
             ))}
