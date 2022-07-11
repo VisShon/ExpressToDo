@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  animation: fadeInAnimation ease-in 0.2s forwards;
 }
 .heading{
   font-family: 'Mada', sans-serif;
