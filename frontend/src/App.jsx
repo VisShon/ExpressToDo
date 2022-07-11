@@ -11,7 +11,7 @@ function App() {
   const [newGoal,setNewGoal] = useState('')
   useEffect((() => {
     async function fetchData(){
-      const newData = await axios.get('http://localhost:8000/api/goals').then(D=>setData(D.data));
+      const newData = await axios.get('https://expressgoalsapi.herokuapp.com/api/goals').then(D=>setData(D.data));
     }
     fetchData();
   }),[]);
@@ -41,7 +41,7 @@ function App() {
     btn.hidden=false;
     pop.hidden=true;
     bg.hidden=true;
-    const newData = await axios.post(`http://localhost:8000/api/goals`,{title:newGoal});
+    const newData = await axios.post(`https://expressgoalsapi.herokuapp.com/api/goals`,{title:newGoal});
   }
 
   return (
