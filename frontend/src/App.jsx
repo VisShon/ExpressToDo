@@ -12,12 +12,12 @@ function App() {
   useEffect((() => {
     async function fetchData(){
       const newData = await axios.get('https://expressgoalsapi.herokuapp.com/api/goals').then(D=>setData(D.data));
-      console.log('poop')
+      console.log(data[0].id)
     }
     fetchData();
   }),[popUp]);
 
-  const onDone = async () =>{
+  const onDoneButton = async () =>{
     const postData = await axios.post(`https://expressgoalsapi.herokuapp.com/api/goals`,{title:newGoal});
     setIsPopUp(false);
   }
@@ -25,10 +25,10 @@ function App() {
   return (
       <div className="Body">
         <span className="heading">Express To-Do</span>
-        <Todo Data={data}/>
+        <Todo Data={data} setData={setData}/>
         {!popUp && <a href="#" id='addGoal' className="button" onClick={e => setIsPopUp(true)}>Add Goal</a>}
           {popUp && (<>
-          <a href="#" id='Done' className="button" onClick={onDone}>Done</a>
+          <a href="#" id='Done' className="button" onClick={onDoneButton}>Done</a>
           <img id="background" src={bcg}></img>
           <div id="popUp">
             <input id="input" type="text" placeholder='next goal?' className='textfield' value={newGoal} onChange={e => setNewGoal(e.target.value)}></input>
