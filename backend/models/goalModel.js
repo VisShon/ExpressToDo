@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const goalSchema = mongoose.Schema({
     id:{
-        type: Integer,
+        type: Number,
         auto: true,
         require: true,
         index: true,
