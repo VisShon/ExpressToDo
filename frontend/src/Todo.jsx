@@ -1,5 +1,4 @@
 import React from 'react'
-import {useState} from 'react'
 import axios from 'axios'
 
 function Todo({Data,setData}) {
@@ -7,8 +6,8 @@ function Todo({Data,setData}) {
 
     const Checked = async (e)=>{
         console.log(Data);
-        const update = await axios.put(`https://expressgoalsapi.herokuapp.com/api/goals/${e.target.value}`,{status:true});
-        const newData = await axios.get('https://expressgoalsapi.herokuapp.com/api/goals').then(D=>setData(D.data));
+        await axios.put(`https://expressgoalsapi.herokuapp.com/api/goals/${e.target.value}`,{status:true});
+        await axios.get('https://expressgoalsapi.herokuapp.com/api/goals').then(D=>setData(D.data));
     }
 
     return (
